@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon" type="image/x-icon" href="ctf10.jpg">
+    <title>Level 1</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+
+        button:hover span {
+            color: yellow;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <img src="ctf2.jpg" alt="Final" style="height: 150px; width: 150px; display: block; margin: auto; margin-bottom: 20px;">
+        <h2 style="text-align: center;"> Level 1</h2>
+        <br>
+        <input type="password" id="pass" placeholder="Enter a password" />
+        <br>
+        <button onclick="checkAnswer()"><span>Check</span></button>
+    </div>
+
+    <script>
+        function checkAnswer() {
+            let userInput = document.getElementById("pass").value;
+            let correctAnswer = "my first ctf hack";
+            if (userInput === correctAnswer) {
+                alert("Congratulations! You got it right!");
+                window.location.href = "success1.html";
+            } else {
+                alert("Oops! That's not correct. Try again!");
+            }
+        }
+    </script>
+</body>
+
+</html>
